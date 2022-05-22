@@ -6,3 +6,7 @@
     -> Hello Word Node!
 1.2 node index.js -> Estou aqui.
 2.6 node ./index.js --a=5 --b=10  -> 15
+
+### sessão 4
+
+4.1 Criando projeto: npm init
