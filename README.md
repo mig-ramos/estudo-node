@@ -11,3 +11,7 @@
 
 4.1 Criando projeto: npm init
 4.2 NPM init rapido: npm init -y
+4.3 Instalando um pacote:
+    npm install <nome>
+    A pasta node_modules é criada
+    Com npm install, a pasta node_modules eh recriada
