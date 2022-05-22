@@ -15,3 +15,4 @@
     npm install <nome>
     A pasta node_modules é criada
     Com npm install, a pasta node_modules eh recriada
+Os pacotes estao no site: https://www.npmjs.com/
