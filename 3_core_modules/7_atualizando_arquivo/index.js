@@ -8,13 +8,14 @@ const server = http.createServer((req, res) => {
     const name = urlInfo.query.name
 
     if(!name){
-        fs.readFileSync('index.html', function(err, data){
+        fs.readFile('index.html', function(err, data){
             res.writeHead(200, {'Content-Type': 'text/html'})
             res.write(data)
             return res.end()
         })
     } else {
-        fs.writeFile("arquivo.txt", name, function(err, data){
+        const nameNewLine = name + ',\r\n'
+        fs.appendFile("arquivo.txt", nameNewLine, function(err, data){
             res.writeHead(302, {
                 location: "/"
             })
