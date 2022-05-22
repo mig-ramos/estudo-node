@@ -10,3 +10,4 @@
 ### sessão 4
 
 4.1 Criando projeto: npm init
+4.2 NPM init rapido: npm init -y
