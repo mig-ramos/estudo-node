@@ -15,4 +15,19 @@
     npm install <nome>
     A pasta node_modules é criada
     Com npm install, a pasta node_modules eh recriada
-Os pacotes estao no site: https://www.npmjs.com/
+Os pacotes estao no site: https://www.npmjs.com/ 
+
+Atualizar pacotes: npm update (atualiza todos os pacotes) ou npm update <nome>
+Um comando para verificar a necessidade de update: npx npm-check-updates, se tiver algum
+basta dar um: npm install
+
+### criando script
+
+Rotinas são executadas com o npm usando scripts
+npm run <script>
+   Digitando no pakage.json: "start": "node index.js"
+   depois: npm start funciona ou npm run <outros comandos>
+
+### pacote global
+
+Utiliza a flag -g em node install
