@@ -35,3 +35,13 @@ Utiliza a flag -g em node install
 sudo install -g lodash
 NOTA: No caso do lodash é preciso dar o comando: 
 npm link lodash -> para que o programa saiba onde ele está. O motivo é que o lodash não é executavel.
+
+### Executando scriptd com npx
+
+Exemplo: Instalacao do React, simplificando a instalação
+Outro exemplo: a vaquinha falando Hello World! 
+npx cowsay "Hello World!"
+
+### Remover pacote com npm
+
+npm uninstall <nome>
