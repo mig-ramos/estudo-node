@@ -31,3 +31,7 @@ npm run <script>
 ### pacote global
 
 Utiliza a flag -g em node install
+### Exemplo:
+sudo install -g lodash
+NOTA: No caso do lodash é preciso dar o comando: 
+npm link lodash -> para que o programa saiba onde ele está. O motivo é que o lodash não é executavel.
