@@ -32,7 +32,7 @@ if(action === 'Criar conta'){
 } else if (action === 'Consultar saldo'){
     getAccountBalance()
 } else if (action === 'Sacar'){
-    
+    withdraw()
 } else if (action === 'Sair'){
     console.log(chalk.bgBlue.black('Obrigado por usar o Accounts!'))
     process.exit
@@ -120,7 +120,7 @@ function deposit(){
     })
     .catch((err) => console.log(err))
    })
-   .catch(err => console.log(err))
+  // .catch(err => console.log(err))
 
 }
 
@@ -186,6 +186,38 @@ function getAccountBalance(){
             `Olá, o saldo da sua conta é de R$${accountData.balance}`
         ))
         operation()
+    })
+    .catch(err => console.log(err))
+}
+
+// withdraw an amount from user account
+function withdraw() {
+    inquirer.prompt([
+        {
+            name: 'accountName',
+            messagem: 'Qual o nome da sua conta?'
+        }
+    ])
+    .then((answer) => {
+        const accountName = answer['accountName']
+
+        if(!checkAccount(accountName)){
+            return withdraw()
+        }
+
+        inquirer.prompt([
+            {
+                name: 'amount',
+                message: 'Quanto você deseja sacar?'
+            }
+        ])
+        .then((answer) => {
+            const amount = answer['amount']
+
+            console.log(amount)
+            operation()
+        })
+        .catch(err => console.log(err))
     })
     .catch(err => console.log(err))
 }
