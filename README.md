@@ -51,3 +51,6 @@ npm init -y
 npm install express
 cria o arquivo index.js
 node ./index.js  // para rodar
+
+### Html como resposta no node
+Utilizando sendFile
