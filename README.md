@@ -24,9 +24,9 @@ basta dar um: npm install
 ### criando script
 
 Rotinas são executadas com o npm usando scripts
-npm run <script>
-   Digitando no pakage.json: "start": "node index.js"
-   depois: npm start funciona ou npm run <outros comandos>
+- npm run 'script'
+  <p> Digitando no pakage.json: "start": "node index.js"
+  <p> depois: npm start funciona ou npm run "outros comandos"
 
 ### pacote global
 
@@ -44,13 +44,23 @@ npx cowsay "Hello World!"
 
 ### Remover pacote com npm
 
-npm uninstall <nome>
+npm uninstall <b>nome</b>
 
 ### Criando projeto com express
 npm init -y
-npm install express
-cria o arquivo index.js
-node ./index.js  // para rodar
+<p>npm install express
+<p>cria o arquivo index.js
+<p>node ./index.js  // para rodar
 
 ### Html como resposta no node
 Utilizando sendFile
+
+### reiniciar servidor automaticamente
+Instalar o Nodemon como dependência de desenvolvimento (--save-dev)
+<p>npm install --save-dev nodemon
+acrescenta o script: 
+<p>"scripts": {
+    <p>"test": "echo \"Error: no test specified\" && exit 1",
+     <p>"start": "nodemon ./index.js"
+  },
+<p>Em produção vai estar iniciando o servidor de outra forma
