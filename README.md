@@ -49,3 +49,5 @@ npm uninstall <nome>
 ### Criando projeto com express
 npm init -y
 npm install express
+cria o arquivo index.js
+node ./index.js  // para rodar
