@@ -45,3 +45,7 @@ npx cowsay "Hello World!"
 ### Remover pacote com npm
 
 npm uninstall <nome>
+
+### Criando projeto com express
+npm init -y
+npm install express

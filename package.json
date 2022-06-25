@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mig-ramos/estudo-node/issues"
   },
-  "homepage": "https://github.com/mig-ramos/estudo-node#readme"
+  "homepage": "https://github.com/mig-ramos/estudo-node#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
