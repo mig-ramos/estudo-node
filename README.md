@@ -88,4 +88,8 @@ app.engine('handlebars', exphbs.engine())
 - Adicionar ao Express a engine do Handlebars
 - Criar uma view no diretório views, com a <b>extensão handolebars
 - Utilizamos o método render para enviar esta view para a requisição.
+- criar pasta layouts em views
+- Criamos o template que será repetido
+- Criamos a tag especial {{{ body }}}
+- Agora <strong>todas as nossas views</strong> agora o layout é repetido. 
 
