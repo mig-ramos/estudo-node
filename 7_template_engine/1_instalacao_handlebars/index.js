@@ -6,6 +6,11 @@ const app = express()
 app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
 
+app.get('/dashboard', (req, res) => {
+    res.render('dashboard')
+})
+
+// exemplos de dados
 const user = {
     name: "Miguel",
     surname: "Ramos"
@@ -13,8 +18,10 @@ const user = {
 
 const palavra = 'Teste'
 
+const auth = true
+
 app.get('/', (req, res) => {
-    res.render('home',{ user: user, palavra })
+    res.render('home',{ user: user, palavra, auth })
 })
 
 app.listen(3000, () => {
