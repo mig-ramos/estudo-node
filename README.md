@@ -55,7 +55,7 @@ npm init -y
 ### Html como resposta no node
 Utilizando sendFile
 
-### reiniciar servidor automaticamente
+### reiniciar servidor automaticamente com Nodemon
 Instalar o Nodemon como dependência de desenvolvimento (--save-dev)
 <p>npm install --save-dev nodemon
 acrescenta o script: 
@@ -64,3 +64,28 @@ acrescenta o script:
      <p>"start": "nodemon ./index.js"
   },
 <p>Em produção vai estar iniciando o servidor de outra forma
+<p>Quando o script não for 'start' e ser 'serve', para rodar tem que ter 'npm <b>run serve</b>'
+
+## Handlebars
+- É uma template engine para colocar dados dinamicos no html entre {{}} para serem impressos.
+- Podemos criar condicionais e loops no template.
+- O nome do pacote é <b>express-handlebars.
+### Mudança no Handlebars
+Houve uma pequena alteração no Handlebars, que vai quebrar o código das aulas seguintes.
+<p>Para reparar.
+<p>Trocar esta linha de código:
+app.engine('handlebars', exphbs())
+
+Por esta:
+app.engine('handlebars', exphbs.engine())
+<p>Basicamente, precisamos invocar este método engine, que antes era opicional para realizar algumas configurações extras, agora ele é obrigatório para o funcionamento do pacote.
+
+### Instalação
+
+- Express e o Handlebars
+- Podemos utilizar o Nodemon
+- No index importar os pacotes instalados
+- Adicionar ao Express a engine do Handlebars
+- Criar uma view no diretório views, com a <b>extensão handolebars
+- Utilizamos o método render para enviar esta view para a requisição.
+
