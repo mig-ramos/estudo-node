@@ -69,7 +69,7 @@ acrescenta o script:
 ## Handlebars
 - É uma template engine para colocar dados dinamicos no html entre {{}} para serem impressos.
 - Podemos criar condicionais e loops no template.
-- O nome do pacote é <b>express-handlebars.
+- O nome do pacote é <b>npm install express-handlebars.
 ### Mudança no Handlebars
 Houve uma pequena alteração no Handlebars, que vai quebrar o código das aulas seguintes.
 <p>Para reparar.
@@ -80,10 +80,14 @@ Por esta:
 app.engine('handlebars', exphbs.engine())
 <p>Basicamente, precisamos invocar este método engine, que antes era opicional para realizar algumas configurações extras, agora ele é obrigatório para o funcionamento do pacote.
 
-### Instalação
+### Instalação (projeto novo)
 
-- Express e o Handlebars
-- Podemos utilizar o Nodemon
+- npm install express express-handlebars
+- npm install --save-dev  nodemon
+- Criar o index.js
+- Criar as pastas: /public/css/styles.css
+- Criar as pastas: /views/layouts/main.handlebars
+- 
 - No index importar os pacotes instalados
 - Adicionar ao Express a engine do Handlebars
 - Criar uma view no diretório views, com a <b>extensão handolebars
