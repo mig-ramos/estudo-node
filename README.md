@@ -81,7 +81,7 @@ app.engine('handlebars', exphbs.engine())
 <p>Basicamente, precisamos invocar este método engine, que antes era opicional para realizar algumas configurações extras, agora ele é obrigatório para o funcionamento do pacote.
 
 ### Instalação (projeto novo)
-
+- npm init -y
 - npm install express express-handlebars
 - npm install --save-dev  nodemon
 - Criar o index.js
@@ -97,3 +97,15 @@ app.engine('handlebars', exphbs.engine())
 - Criamos a tag especial {{{ body }}}
 - Agora <strong>todas as nossas views</strong> agora o layout é repetido. 
 
+### MySQL
+CREATE DATABASE `nodemysql` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+CREATE TABLE nodemysql.books (
+	id INT auto_increment NOT NULL,
+	title VARCHAR(255) NULL,
+	pageqty INT NULL,
+	PRIMARY KEY (id)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci;
