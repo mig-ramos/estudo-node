@@ -1,5 +1,7 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
+
+const user = require('./models/User')
 const conn = require('./db/conn')
 
 const app = express()
@@ -22,5 +24,7 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
-app.listen(3000)
+conn.sync().then(() => {
+    app.listem(3000)
+}).catch(err => console.log(err))
 
