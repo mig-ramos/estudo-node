@@ -43,8 +43,13 @@ app.post('/users/create', async (req, res) => {
     res.redirect('/')
 })
 
-app.get('/', (req, res) => {
-    res.render('home')
+app.get('/', async (req, res) => {
+    
+    // O raw age como um filtro deixando apenas os dados num array
+    const users =  await User.findAll({raw: true})
+    console.log(users)
+
+    res.render('home', { users: users })
 })
 
 conn.sync().then(() => {
