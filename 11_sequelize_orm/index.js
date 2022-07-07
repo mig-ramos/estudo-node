@@ -65,6 +65,33 @@ const user = await User.findOne({raw: true, where: { id: id } })
 res.render('edituser', { user })
 })
 
+app.post('/users/update', async (req, res) => {
+
+    const id = req.body.id
+    const name = req.body.name
+    const occupation = req.body.occupation
+    let newsletter = req.body.newsletter
+
+    if(newsletter === 'on'){
+        newsletter = true
+    } else {
+        newsletter = false
+    }
+
+    // CRIANDO O OBJETO - como id: id então id,
+    const userData = {
+        id,
+        name,
+        occupation,
+        newsletter
+    }
+
+    await User.update(userData, { where: {id: id}})
+
+    res.redirect('/')
+
+})
+
 app.get('/', async (req, res) => {
     
     // O raw age como um filtro deixando apenas os dados num array
