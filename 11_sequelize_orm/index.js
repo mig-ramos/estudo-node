@@ -58,6 +58,13 @@ await User.destroy({where: { id: id }})
 res.redirect('/')
 })
 
+app.get('/users/edit/:id', async (req, res) => {
+    const id = req.params.id
+const user = await User.findOne({raw: true, where: { id: id } })
+
+res.render('edituser', { user })
+})
+
 app.get('/', async (req, res) => {
     
     // O raw age como um filtro deixando apenas os dados num array
