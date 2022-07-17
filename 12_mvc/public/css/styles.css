@@ -95,6 +95,11 @@ font-size: 1.2em;
   color: #333;
 }
 
+.title.done {
+  text-decoration: line-through;
+  color: #333;
+}
+
 .actions {
   display: flex;
 }
@@ -119,3 +124,4 @@ font-size: 1.2em;
   border: none;
   cursor: pointer;
 }
+
