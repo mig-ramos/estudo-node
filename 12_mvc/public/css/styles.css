@@ -109,3 +109,13 @@ font-size: 1.2em;
 .actions i:hover {
   color: #db4c3f;
 }
+
+.actions form {
+  margin: 0;
+}
+
+.actions button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
